@@ -1,0 +1,39 @@
+{
+  "name": "dispatch-event",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mightyiam/dispatch-event.git"
+  },
+  "keywords": [
+    "dispatchEvent",
+    "fireEvent",
+    "event",
+    "ie"
+  ],
+  "author": "Shahar Or <mightyiampresence@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mightyiam/dispatch-event/issues"
+  },
+  "homepage": "https://github.com/mightyiam/dispatch-event",
+  "devDependencies": {
+    "create-event": "^1.0.3",
+    "dom-events": "^0.1.1",
+    "jasmine-core": "^2.1.3",
+    "karma": "^0.12.31",
+    "karma-browserify": "^2.0.0",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-ie-launcher": "^0.1.5",
+    "karma-jasmine": "^0.3.5"
+  },
+  "dependencies": {
+    "lodash.iselement": "^2.4.1"
+  }
+}
