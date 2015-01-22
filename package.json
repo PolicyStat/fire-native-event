@@ -1,7 +1,7 @@
 {
   "name": "fire-native-event",
   "version": "1.0.0",
-  "description": "CommonJS module that fires browser native events",
+  "description": "Fires browser native events",
   "main": "index.js",
   "scripts": {
     "test": "karma start --single-run"
