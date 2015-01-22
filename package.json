@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/mightyiam/dispatch-event",
   "devDependencies": {
-    "create-event": "^1.0.3",
     "dom-events": "^0.1.1",
     "jasmine-core": "^2.1.3",
     "karma": "^0.12.31",
@@ -31,7 +30,8 @@
     "karma-chrome-launcher": "^0.1.7",
     "karma-firefox-launcher": "^0.1.4",
     "karma-ie-launcher": "^0.1.5",
-    "karma-jasmine": "^0.3.5"
+    "karma-jasmine": "^0.3.5",
+    "synthetic-dom-events": "^0.2.2"
   },
   "dependencies": {
     "lodash.iselement": "^2.4.1"

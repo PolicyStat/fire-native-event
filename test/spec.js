@@ -2,7 +2,7 @@
 "use strict";
 
 var fire = require("..");
-var createEvent = require("create-event");
+var synth = require("synthetic-dom-events");
 var on = require("dom-events").on;
 
 var triggered = false;
@@ -12,7 +12,7 @@ var handler = function () {
     triggered = true;
 };
 var eventType = "click";
-var event = createEvent(eventType);
+var event = synth(eventType);
 
 on(element, eventType, handler);
 
