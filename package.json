@@ -1,6 +1,6 @@
 {
   "name": "fire-native-event",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Fires browser native events",
   "main": "index.js",
   "scripts": {
