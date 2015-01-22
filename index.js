@@ -7,8 +7,14 @@ var usingDispatchEvent = function (target, event) {
     return Element.prototype.dispatchEvent.call(target, event);
 };
 
-var usingFireEvent = function (target, event, type) {
-    return target.fireEvent("on" + type, event);
+var usingFireEvent = function (target, event) {
+    if (
+        typeof event.type !== "string" ||
+        event.type.length === 0
+    ) {
+        throw "Expected event to have property type";
+    }
+    return target.fireEvent("on" + event.type, event);
 };
 
 var chooseMethod = function(){
@@ -26,20 +32,13 @@ var chooseMethod = function(){
 
 var method = chooseMethod();
 
-module.exports = function(target, event, type) {
+module.exports = function(target, event) {
     if (isElement(target) !== true) {
-        throw "dispatch-event: Element not provided";
+        throw "Element not provided";
     }
     if (typeof event !== "object") {
-        throw "dispatch-event: Event not provided or is not an object";
+        throw "Event not provided or is not an object";
     }
 
-    if (
-        typeof type !== "string" ||
-        type.length === 0
-    ) {
-        throw "dispatch-event: Event type not provided";
-    }
-
-    method(target, event, type);
+    method(target, event);
 };
