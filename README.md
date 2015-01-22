@@ -1,6 +1,6 @@
 # fire-native-event
 
-Fires a native event.
+CommonJS module that fires a browser native event.
 
 Should be compatible with IE6+ and reasonable browsers.
 
