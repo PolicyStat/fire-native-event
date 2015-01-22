@@ -1,7 +1,7 @@
 /* eslint-env node, browser, jasmine */
 "use strict";
 
-var dispatch = require("..");
+var fire = require("..");
 var createEvent = require("create-event");
 var on = require("dom-events").on;
 
@@ -16,31 +16,31 @@ var event = createEvent(eventType);
 
 on(element, eventType, handler);
 
-describe("dispatch-event", function(){
+describe("fire-event", function(){
     describe("throws", function(){
         it("when not provided arguments", function(){
             expect(function(){
-                dispatch();
+                fire();
             }).toThrow();
         });
         it("when provided one argument", function(){
             expect(function(){
-                dispatch(element);
+                fire(element);
             }).toThrow();
         });
         it("when first argument is not an element", function(){
             expect(function(){
-                dispatch("foo", event, eventType);
+                fire("foo", event);
             }).toThrow();
         });
         it("when second argument is not an object", function(){
             expect(function(){
-                dispatch(element, "foo", eventType);
+                fire(element, "foo");
             }).toThrow();
         });
     });
     it("triggers an event", function() {
-        dispatch(element, event, eventType);
+        fire(element, event);
         expect(triggered).toEqual(true);
     });
 });
